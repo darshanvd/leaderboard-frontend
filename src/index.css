@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-grey-text: #BDBDBD;
+  --color-dark-grey-text: #8C8C8C;
+  --color-blue-text: #006FFF;
+  --color-red-text: #F03A3E;
+  --color-grey-border: #EDEDF0;
+  --color-grey-light-hover: #F9FAFA;
+  --color-header-bg: #F4F5F6;
+  --color-header-text: #808893;
+}
+
+.modal-backdrop {
+  background: rgba(0,0,0,0.5);
+}
