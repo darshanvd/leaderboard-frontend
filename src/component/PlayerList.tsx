@@ -69,7 +69,7 @@ const PlayerList: React.FC = () => {
 
     // Subscribe to playerUpdated
     useSubscription(UPSERT_PLAYER_SUBSCRIPTION, {
-        onData: ({ data }) => {
+        onData: ({ data: Player }) => {
             const updatedPlayer = data?.data?.upsertPlayer;
             if (updatedPlayer) {
                 const exists = players.some(p => p.playerId === updatedPlayer.playerId);
@@ -125,8 +125,6 @@ const PlayerList: React.FC = () => {
 
     const handleDelete = (playerId: string) => {
         deletePlayer({ variables: { playerId } });
-        const updatedPlayers = (players || []).filter(p => p.playerId !== playerId);
-        dispatch(getAllPlayersSuccess(updatedPlayers));
     };
     
     const handleAdd = () => {
