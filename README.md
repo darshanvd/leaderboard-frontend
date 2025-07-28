@@ -29,7 +29,7 @@ yarn install # or npm install
 ```
 
 ### Environment Variables
-Create a `.env` file for development:
+Create a `.env` at root directory file for development:
 ```
 VITE_GRAPHQL_HTTP=http://localhost:8080/graphql
 VITE_GRAPHQL_WS=ws://localhost:8080/graphql
